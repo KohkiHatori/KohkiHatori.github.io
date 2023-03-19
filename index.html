@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Fourier Drawing</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+  <div class="image-post">
+    <input type="file" name="file" id="fileupload" name="fileupload">
+    <button type="submit" role="button" id="upload-button" onclick="upload()">UPLOAD</button>
+  </div>
+  <div class="animation-wrapper">
+    <div class="canvas-wrapper">
+      <canvas id="anim">
+      </canvas>
+      <canvas id="path">
+      </canvas>
+    </div>
+    <div class="button-wrapper">
+      <button id="quit-button" onclick="quit_animation()">QUIT</button>
+      <button id="clear-button" onclick="erase_path()">CLEAR</button>
+      <button id="toggle-animation" onclick="toggle_animation()"></button>
+      <div>
+        <label class="switch">
+          <input type="checkbox" onchange="toggle_circle()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div>
+        <label class="switch">
+          <input type="checkbox" onchange="toggle_vector()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <input id="num-vec-slider" type="range" min="1" value="150" max="150" step="1" onchange="change_num_vec()">
+      <div id="num-vec">150</div>
+      <input id="speed-slider" type="range" min="1" value="1" max="11" step="1" onchange="change_speed()">
+      <div id="speed">1</div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="static//js/index.js"></script>
+</body>
+</html>
